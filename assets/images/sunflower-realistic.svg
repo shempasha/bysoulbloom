@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1000">
+<defs>
+  <radialGradient id="centerGrad" cx="38%" cy="36%">
+    <stop offset="0%" stop-color="#8a5c37"/>
+    <stop offset="58%" stop-color="#6b4228"/>
+    <stop offset="100%" stop-color="#42291c"/>
+  </radialGradient>
+  <linearGradient id="petalGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#fffdf8"/>
+    <stop offset="70%" stop-color="#f7eee4"/>
+    <stop offset="100%" stop-color="#ead9c8"/>
+  </linearGradient>
+</defs>
+
+<!-- petals, deliberately irregular and layered -->
+<g transform="translate(725 505)" stroke="#a96f46" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="url(#petalGrad)" stroke-width="4">
+    <path d="M-100-145 C-205-315 -150-405 -55-390 C20-330 8-215 -100-145Z"/>
+    <path d="M-155-112 C-310-245 -315-345 -225-370 C-120-340 -65-240 -155-112Z"/>
+    <path d="M-190-60 C-375-145 -420-240 -345-300 C-225-290 -145-205 -190-60Z"/>
+    <path d="M-208 2 C-408-18 -480-92 -436-176 C-321-220 -214-135 -208 2Z"/>
+    <path d="M-195 70 C-390 130 -454 78 -446-16 C-355-84 -236-43 -195 70Z"/>
+    <path d="M-155 128 C-315 265 -390 238 -410 145 C-346 37 -224 35 -155 128Z"/>
+    <path d="M-98 169 C-215 355 -306 348 -350 265 C-326 145 -207 96 -98 169Z"/>
+    <path d="M-32 186 C-92 399 -192 422 -258 348 C-272 226 -170 139 -32 186Z"/>
+    <path d="M20 183 C32 402 -62 458 -145 398 C-190 281 -120 169 20 183Z"/>
+    <path d="M-40-184 C-92-390 6-446 92-390 C133-275 74-171 -40-184Z"/>
+    <path d="M25-175 C56-372 164-410 235-335 C244-224 156-147 25-175Z"/>
+  </g>
+
+  <!-- veins -->
+  <g fill="none" stroke="#c8966d" stroke-width="2" opacity=".75">
+    <path d="M-96-150 C-92-244 -69-320 -56-382"/>
+    <path d="M-151-114 C-180-215 -204-294 -225-360"/>
+    <path d="M-185-62 C-257-150 -313-220 -340-292"/>
+    <path d="M-202 0 C-294-57 -368-107 -426-170"/>
+    <path d="M-190 68 C-283 84 -369 76 -434-14"/>
+    <path d="M-151 123 C-223 183 -301 214 -400 143"/>
+    <path d="M-95 164 C-157 254 -228 308 -341 260"/>
+    <path d="M-30 180 C-55 282 -113 364 -250 342"/>
+    <path d="M18 177 C25 278 -4 356 -137 391"/>
+  </g>
+
+  <!-- textured seed head -->
+  <circle cx="58" cy="0" r="190" fill="url(#centerGrad)" stroke="#43291b" stroke-width="5"/>
+  <g fill="#d1a374" opacity=".92">
+    <circle cx="-72" cy="-96" r="5"/><circle cx="-42" cy="-110" r="4"/><circle cx="-8" cy="-118" r="5"/>
+    <circle cx="28" cy="-120" r="4"/><circle cx="64" cy="-114" r="5"/><circle cx="102" cy="-100" r="4"/>
+    <circle cx="136" cy="-75" r="5"/><circle cx="158" cy="-42" r="4"/>
+    <circle cx="-98" cy="-62" r="4"/><circle cx="-68" cy="-74" r="5"/><circle cx="-34" cy="-80" r="4"/>
+    <circle cx="2" cy="-82" r="5"/><circle cx="38" cy="-78" r="4"/><circle cx="74" cy="-68" r="5"/>
+    <circle cx="108" cy="-48" r="4"/><circle cx="136" cy="-20" r="5"/>
+    <circle cx="-112" cy="-20" r="5"/><circle cx="-80" cy="-30" r="4"/><circle cx="-45" cy="-35" r="5"/>
+    <circle cx="-8" cy="-34" r="4"/><circle cx="28" cy="-30" r="5"/><circle cx="64" cy="-20" r="4"/>
+    <circle cx="98" cy="-3" r="5"/><circle cx="124" cy="22" r="4"/>
+    <circle cx="-110" cy="26" r="4"/><circle cx="-76" cy="20" r="5"/><circle cx="-40" cy="18" r="4"/>
+    <circle cx="-4" cy="20" r="5"/><circle cx="34" cy="26" r="4"/><circle cx="70" cy="38" r="5"/>
+    <circle cx="102" cy="56" r="4"/><circle cx="124" cy="80" r="5"/>
+    <circle cx="-92" cy="68" r="5"/><circle cx="-56" cy="64" r="4"/><circle cx="-20" cy="66" r="5"/>
+    <circle cx="16" cy="74" r="4"/><circle cx="52" cy="87" r="5"/><circle cx="84" cy="103" r="4"/>
+    <circle cx="-66" cy="104" r="4"/><circle cx="-30" cy="104" r="5"/><circle cx="6" cy="111" r="4"/>
+    <circle cx="40" cy="122" r="5"/><circle cx="70" cy="137" r="4"/>
+  </g>
+  <g fill="none" stroke="#c79469" stroke-width="2.2" opacity=".7">
+    <path d="M-105-58 C-48-128 69-142 149-85"/>
+    <path d="M-124-20 C-51-87 78-97 166-32"/>
+    <path d="M-125 23 C-40-33 84-29 166 28"/>
+    <path d="M-105 69 C-15 30 96 38 151 83"/>
+    <path d="M-72 110 C0 91 90 102 126 130"/>
+  </g>
+</g>
+</svg>

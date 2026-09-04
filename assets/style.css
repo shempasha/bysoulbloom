@@ -1,0 +1,656 @@
+
+:root{
+  --ink:#241d18; --brown:#5a4435; --clay:#9b6548; --sand:#d8c6b2;
+  --cream:#f7f2ea; --paper:#fffdf9; --sage:#747665; --line:#ded3c6;
+  --radius:22px; --shadow:0 18px 55px rgba(42,31,23,.10);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:500;line-height:1.04;letter-spacing:-.025em}
+h1{font-size:clamp(3.2rem,7vw,7.2rem);margin:.15em 0}
+h2{font-size:clamp(2.3rem,4vw,4.4rem);margin:.2em 0 .35em}
+h3{font-size:1.6rem;margin:.2em 0 .4em}
+p{margin:.4em 0 1em}.muted{color:#6f655d}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;font-weight:700;color:var(--clay)}
+.container{width:min(1180px,calc(100% - 40px));margin:auto}.section{padding:92px 0}.section-sm{padding:56px 0}
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,253,249,.91);backdrop-filter:blur(14px);border-bottom:1px solid rgba(90,68,53,.10)}
+.navin{height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;text-decoration:none;color:var(--ink)}
+.brand img{width:154px;height:52px;object-fit:contain}.links{display:flex;align-items:center;gap:24px}.links a{text-decoration:none;color:var(--ink);font-size:.92rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--ink);background:var(--ink);color:white;text-decoration:none;padding:13px 19px;border-radius:999px;font-weight:700;cursor:pointer}
+.btn.alt{background:transparent;color:var(--ink)}.btn.soft{background:var(--cream);color:var(--ink);border-color:var(--line)}
+.hero{min-height:760px;position:relative;display:grid;align-items:end;overflow:hidden;background:#2b241f}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,15,12,.70),rgba(20,15,12,.20) 58%,rgba(20,15,12,.05)),url('images/IMG_0303.jpeg') center/cover no-repeat}
+.hero-content{position:relative;color:white;padding:110px 0 90px;max-width:780px}.hero p{font-size:1.12rem;max-width:610px;color:#f2eae1}.hero .btn{background:#f8f2e8;color:#2a211b;border-color:#f8f2e8}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}.split img{width:100%;height:610px;object-fit:cover;border-radius:var(--radius)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.stat{background:var(--cream);padding:34px}.stat strong{display:block;font:500 2.3rem Georgia,serif}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:white}
+.card img{width:100%;height:260px;object-fit:cover;object-position: center 95%;}
+.card-body{padding:24px}.price{font:500 2rem Georgia,serif}
+.tag{display:inline-block;padding:7px 10px;border-radius:999px;background:var(--cream);font-size:.75rem;font-weight:700}
+.featured{border:1.5px solid var(--brown);box-shadow:var(--shadow);transform:translateY(-8px)}
+.band{background:var(--brown);color:white}.band .muted{color:#e5d8ca}.band-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.step-num{font:500 3rem Georgia,serif;color:#d9c3ad}
+.gallery{columns:3 280px;column-gap:16px}.gallery img{width:100%;margin:0 0 16px;border-radius:18px;display:block;break-inside:avoid}
+.quote{background:var(--cream);border-radius:32px;padding:72px;text-align:center}.quote p{font:500 clamp(2rem,4vw,4rem) Georgia,serif;line-height:1.1}
+.faq{border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line);padding:20px 0}summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between}summary:after{content:"+"}
+.footer{background:#241d18;color:#eee3d8;padding:65px 0 30px}.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}.footer a{color:#eee3d8;text-decoration:none}.small{font-size:.85rem}
+.page-hero{padding:100px 0 65px;background:var(--cream)}.page-hero p{max-width:700px}
+.form-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:34px}.panel{border:1px solid var(--line);border-radius:24px;padding:28px;background:white}.sticky{position:sticky;top:105px}
+.field{margin:0 0 18px}.field label{display:block;font-weight:700;font-size:.88rem;margin-bottom:7px}
+input,select,textarea{width:100%;padding:13px 14px;border:1px solid #cfc3b6;border-radius:12px;background:#fffdf9;font:inherit;color:var(--ink)}textarea{min-height:120px;resize:vertical}
+.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}.choice{border:1px solid var(--line);border-radius:15px;padding:14px;cursor:pointer}.choice input{width:auto;margin-right:8px}
+.total{font:500 3.2rem Georgia,serif;margin:.15em 0}.notice{padding:14px 16px;background:var(--cream);border-radius:14px;font-size:.88rem}
+.list-clean{padding:0;margin:0;list-style:none}.list-clean li{padding:7px 0;border-bottom:1px solid #eee6dd}
+.package-detail{display:grid;grid-template-columns:1fr auto;gap:16px}
+.mobile-menu{display:none}
+@media(max-width:900px){
+ .links{display:none}.mobile-menu{display:block}.hero{min-height:680px}.hero:before{background:linear-gradient(rgba(20,15,12,.35),rgba(20,15,12,.70)),url('images/IMG_0303.jpeg') center/cover}
+ .split,.form-wrap{grid-template-columns:1fr}.split img{height:470px}.grid4{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr 1fr}.band-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr}.sticky{position:static}
+}
+@media(max-width:620px){
+ .container{width:min(100% - 28px,1180px)}.section{padding:68px 0}.hero-content{padding:80px 0 60px}.grid4,.grid3,.band-grid,.stats,.options{grid-template-columns:1fr}.featured{transform:none}.quote{padding:42px 24px}.card img{height:230px}.page-hero{padding:72px 0 48px}
+}
+
+
+
+
+
+@media(max-width:620px){
+  .about-sunflower{
+    right:6px;
+    bottom:8px;
+    width:135px;
+    opacity:.88;
+  }
+}
+
+
+
+
+/* ABOUT PHOTO-REFERENCE PAGE */
+.about-page{background:#fffdf8}
+.about-nav{background:rgba(255,253,248,.97)}
+.about-page .navin{height:82px}
+.about-page .brand img{width:146px;height:56px}
+.about-page .links{gap:26px}
+.about-page .links a{font-size:.79rem;text-transform:uppercase;letter-spacing:.08em}
+.about-page .about-cta{padding:14px 24px;border-radius:0;background:#3c291c;border-color:#3c291c}
+.active-link{position:relative}
+.active-link:after{content:"";position:absolute;left:0;right:0;bottom:-13px;height:1px;background:#7e6453}
+
+.about-photo-hero{
+  min-height:315px;
+  position:relative;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  background:url('images/IMG_0306.jpeg') center 53%/cover no-repeat;
+}
+.about-photo-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(rgba(249,244,236,.74),rgba(249,244,236,.76));
+  backdrop-filter:saturate(.7);
+}
+.about-photo-content{position:relative;text-align:center;padding:56px 0 50px}
+.about-photo-content h1{
+  margin:0;
+  font-size:clamp(3rem,5vw,5.15rem);
+  text-transform:uppercase;
+  letter-spacing:.035em;
+  color:#3c291c;
+}
+.about-photo-content p{
+  margin-top:18px;
+  text-transform:uppercase;
+  letter-spacing:.24em;
+  font-size:.79rem;
+  color:#9d6a45;
+  font-weight:700;
+}
+.about-ornament{width:min(480px,72vw);margin:23px auto 0;display:flex;align-items:center;gap:22px;color:#a97852}
+.about-ornament span{height:1px;background:#b99a80;flex:1}
+.about-ornament b{font:400 1.15rem Georgia,serif}
+
+.about-story-section{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(90deg,#fffdfa 0%,#fffaf4 72%,#fbf0e6 100%);
+}
+.about-story-layout{
+  min-height:720px;
+  display:grid;
+  grid-template-columns:minmax(0,1.04fr) minmax(390px,.96fr);
+  gap:20px;
+  align-items:stretch;
+}
+.about-story-copy{
+  position:relative;
+  z-index:2;
+  max-width:760px;
+  padding:72px 0 78px;
+}
+.about-story-copy h2,
+.about-story-copy h3{
+  color:#3f2d22;
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:500;
+  letter-spacing:-.02em;
+  line-height:1.18;
+}
+.about-story-copy h2{font-size:clamp(1.9rem,2.55vw,2.75rem);margin:0 0 24px}
+.about-story-copy h3{font-size:clamp(1.8rem,2.35vw,2.45rem);margin:30px 0 17px}
+.about-story-copy em{font-weight:400}
+.about-story-copy p{
+  max-width:700px;
+  font-size:1rem;
+  line-height:1.72;
+  color:#3f3a36;
+  margin:0 0 25px;
+}
+.about-story-copy blockquote{
+  margin:28px 0 0;
+  padding:3px 0 3px 20px;
+  border-left:2px solid #9f6e4d;
+  font:500 clamp(1.5rem,2.2vw,2rem)/1.28 Georgia,"Times New Roman",serif;
+  color:#473328;
+}
+
+.about-sunflower-visual{
+  position:relative;
+  min-height:720px;
+  pointer-events:none;
+}
+.about-sunflower-visual svg{
+  position:absolute;
+  width:780px;
+  height:920px;
+  right:-365px;
+  top:-84px;
+  overflow:visible;
+  filter:drop-shadow(0 12px 25px rgba(102,65,38,.04));
+}
+
+.about-bottom-cta{background:#fffdf8}
+
+@media(max-width:1000px){
+  .about-page .links{gap:16px}
+  .about-page .links a{font-size:.72rem}
+  .about-story-layout{grid-template-columns:1fr;min-height:auto}
+  .about-story-copy{padding-right:130px}
+  .about-sunflower-visual{
+    position:absolute;
+    right:-205px;
+    bottom:0;
+    width:470px;
+    height:650px;
+    opacity:.24;
+  }
+  .about-sunflower-visual svg{right:-250px;top:-60px;width:700px;height:820px}
+}
+@media(max-width:620px){
+  .about-photo-hero{min-height:260px}
+  .about-photo-content{padding:48px 0 42px}
+  .about-photo-content h1{font-size:2.45rem}
+  .about-photo-content p{font-size:.68rem;letter-spacing:.18em}
+  .about-story-copy{padding:52px 0 60px;padding-right:0}
+  .about-story-copy h2{font-size:1.92rem}
+  .about-story-copy h3{font-size:1.72rem}
+  .about-story-copy p{font-size:.96rem}
+  .about-story-copy blockquote{font-size:1.45rem}
+  .about-sunflower-visual{right:-240px;width:400px;height:560px;opacity:.13}
+  .about-sunflower-visual svg{width:620px;height:730px;right:-250px;top:-40px}
+}
+
+
+/* v6 unified navigation */
+.site-nav .links{gap:20px}
+.site-nav .links a{
+  font-size:.78rem;
+  text-transform:uppercase;
+  letter-spacing:.065em;
+  white-space:nowrap;
+}
+.site-nav .nav-cta{
+  background:#4a3324 !important;
+  border-color:#4a3324 !important;
+  color:#fffaf4 !important;
+  padding:13px 20px;
+}
+.site-nav .nav-cta:hover{background:#2f2017 !important;border-color:#2f2017 !important;color:#fff !important}
+
+/* About flower: same visual footprint, more botanical, slightly farther left */
+.about-sunflower-visual{
+  position:relative;
+  min-height:720px;
+  pointer-events:none;
+  overflow:visible;
+}
+.about-sunflower-visual img{
+  position:absolute;
+  width:800px;
+  max-width:none;
+  height:auto;
+  right:-300px;
+  top:-78px;
+  filter:drop-shadow(0 12px 24px rgba(96,59,34,.05));
+}
+
+/* Gallery: intentional editorial layout, no accidental blank lower-right space */
+.gallery-editorial-section{overflow:hidden}
+.gallery-editorial{
+  display:grid;
+  grid-template-columns:1.05fr 1fr 1fr;
+  grid-auto-rows:210px;
+  gap:16px;
+  position:relative;
+  min-height:1320px;
+}
+.gallery-item{margin:0;overflow:hidden;border-radius:20px;background:var(--cream)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
+.gallery-item:hover img{transform:scale(1.025)}
+.gallery-item.g1{grid-column:1;grid-row:1 / span 3}
+.gallery-item.g2{grid-column:2;grid-row:1 / span 2}
+.gallery-item.g3{grid-column:3;grid-row:1 / span 3}
+.gallery-item.g4{grid-column:2;grid-row:3 / span 3}
+.gallery-item.g5{grid-column:1;grid-row:4 / span 2}
+.gallery-item.g6{grid-column:3;grid-row:4 / span 2}
+.gallery-item.g7{grid-column:1;grid-row:6 / span 2}
+.gallery-item.g8{grid-column:2;grid-row:6 / span 2}
+.gallery-item.g9{grid-column:3;grid-row:6 / span 2}
+.gallery-item.g10{grid-column:1 / span 2;grid-row:8 / span 2}
+.gallery-sunflower{
+  grid-column:3;
+  grid-row:8 / span 2;
+  position:relative;
+  overflow:visible;
+  min-height:430px;
+}
+.gallery-sunflower img{
+  position:absolute;
+  width:620px;
+  max-width:none;
+  right:-300px;
+  bottom:-120px;
+  opacity:.96;
+}
+
+/* Contact */
+.contact-split a{color:var(--brown);text-decoration:none}
+.contact-split a:hover{text-decoration:underline}
+
+@media(max-width:1100px){
+  .site-nav .links{gap:12px}
+  .site-nav .links a{font-size:.69rem}
+  .site-nav .nav-cta{padding:12px 15px}
+}
+@media(max-width:900px){
+  .gallery-editorial{grid-template-columns:1fr 1fr;grid-auto-rows:230px;min-height:auto}
+  .gallery-item{grid-column:auto !important;grid-row:span 2 !important}
+  .gallery-item:nth-child(3n){grid-row:span 3 !important}
+  .gallery-sunflower{grid-column:2;grid-row:span 2;min-height:460px}
+  .gallery-sunflower img{right:-320px;width:590px}
+  .about-sunflower-visual img{right:-340px;width:740px;opacity:.35}
+}
+@media(max-width:620px){
+  .gallery-editorial{grid-template-columns:1fr;grid-auto-rows:250px}
+  .gallery-item{grid-column:1 !important;grid-row:span 2 !important}
+  .gallery-sunflower{display:none}
+  .about-sunflower-visual img{right:-390px;width:680px;opacity:.14}
+}
+
+
+/* v7 final sunflower + button refinements */
+.about-sunflower-visual img{
+  right:-285px !important;
+  top:-70px !important;
+  width:810px !important;
+  opacity:1 !important;
+}
+.gallery-sunflower img{
+  right:-285px !important;
+  width:620px !important;
+  opacity:.98 !important;
+}
+
+/* Guarantee readable text on every dark brown CTA */
+.btn,
+.nav-cta,
+.about-cta,
+.panel .btn,
+.quote .btn,
+form .btn{
+  color:#fffaf4 !important;
+}
+.btn:hover,
+.nav-cta:hover,
+.about-cta:hover,
+.panel .btn:hover,
+.quote .btn:hover,
+form .btn:hover{
+  color:#ffffff !important;
+}
+.btn.soft,
+.btn.alt{
+  color:var(--ink) !important;
+}
+
+
+/* v8 final fixes */
+
+/* HOME hero CTA: dark brown button + white text */
+.hero .btn{
+  background:#4a3324 !important;
+  border-color:#4a3324 !important;
+  color:#fffaf4 !important;
+}
+.hero .btn:hover{
+  background:#2f2017 !important;
+  border-color:#2f2017 !important;
+  color:#ffffff !important;
+}
+
+/* Replaceable sunflower photo */
+.about-sunflower-visual{
+  overflow:hidden !important;
+}
+.about-sunflower-visual img{
+  position:absolute !important;
+  width:760px !important;
+  max-width:none !important;
+  height:760px !important;
+  object-fit:cover !important;
+  object-position:left center !important;
+  right:-255px !important;
+  top:-18px !important;
+  opacity:1 !important;
+  border-radius:0 !important;
+  filter:none !important;
+}
+
+/* Gallery: no logo, only photos + optional sunflower accent */
+.gallery-editorial{
+  display:grid !important;
+  grid-template-columns:repeat(3,1fr) !important;
+  grid-auto-rows:220px !important;
+  gap:16px !important;
+  min-height:auto !important;
+}
+.gallery-item{grid-column:auto !important;grid-row:span 2 !important}
+.gallery-item:nth-child(3n+1){grid-row:span 3 !important}
+.gallery-item:nth-child(5n){grid-row:span 2 !important}
+.gallery-sunflower{
+  grid-column:3 !important;
+  grid-row:span 2 !important;
+  min-height:456px !important;
+  overflow:hidden !important;
+  border-radius:20px !important;
+  background:var(--cream);
+}
+.gallery-sunflower img{
+  position:static !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:none !important;
+  object-fit:cover !important;
+  object-position:left center !important;
+  opacity:1 !important;
+}
+
+@media(max-width:900px){
+  .gallery-editorial{grid-template-columns:1fr 1fr !important}
+  .gallery-sunflower{grid-column:auto !important}
+  .about-sunflower-visual img{
+    width:620px !important;
+    height:620px !important;
+    right:-300px !important;
+    top:40px !important;
+    opacity:.35 !important;
+  }
+}
+@media(max-width:620px){
+  .gallery-editorial{grid-template-columns:1fr !important}
+  .gallery-sunflower{display:none !important}
+  .about-sunflower-visual img{
+    width:560px !important;
+    height:560px !important;
+    right:-350px !important;
+    top:80px !important;
+    opacity:.14 !important;
+  }
+}
+
+
+/* v9 final cleanup */
+
+/* HOME hero button stays dark brown with white text */
+.hero .btn{
+  background:#4a3324 !important;
+  border-color:#4a3324 !important;
+  color:#fffaf4 !important;
+}
+
+/* ABOUT sunflower: no colored panel / no visible fill block.
+   Later, replace ONLY assets/images/sunflower-about.jpg with another image.
+   No CSS edits needed. */
+.about-sunflower-visual{
+  background:#ffffff !important;
+  overflow:hidden !important;
+}
+.about-sunflower-visual img{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center right !important;
+  background:#ffffff !important;
+  border-radius:0 !important;
+  filter:none !important;
+  opacity:1 !important;
+}
+
+/* GALLERY: photos only, no sunflower tile */
+.gallery-editorial{
+  grid-template-columns:repeat(3,1fr) !important;
+  grid-auto-rows:220px !important;
+  min-height:auto !important;
+}
+.gallery-sunflower{display:none !important}
+
+@media(max-width:900px){
+  .gallery-editorial{grid-template-columns:1fr 1fr !important}
+  .about-sunflower-visual img{
+    object-position:center right !important;
+    opacity:1 !important;
+  }
+}
+@media(max-width:620px){
+  .gallery-editorial{grid-template-columns:1fr !important}
+  .about-sunflower-visual{
+    min-height:360px !important;
+  }
+  .about-sunflower-visual img{
+    object-position:center right !important;
+    opacity:1 !important;
+  }
+}
+
+
+/* v10 — About flower: ONLY the flower, no rectangular image fill */
+.about-story{
+  position:relative !important;
+  overflow:hidden !important;
+}
+.about-sunflower-visual{
+  position:absolute !important;
+  right:0 !important;
+  top:0 !important;
+  bottom:0 !important;
+  width:46% !important;
+  height:100% !important;
+  background:transparent !important;
+  overflow:visible !important;
+  pointer-events:none !important;
+}
+.about-sunflower-visual img{
+  position:absolute !important;
+  right:-35px !important;
+  top:50% !important;
+  transform:translateY(-50%) !important;
+  width:min(650px, 48vw) !important;
+  height:auto !important;
+  max-width:none !important;
+  object-fit:contain !important;
+  background:transparent !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  filter:none !important;
+  opacity:1 !important;
+}
+
+@media(max-width:900px){
+  .about-sunflower-visual{
+    width:42% !important;
+  }
+  .about-sunflower-visual img{
+    right:-80px !important;
+    width:520px !important;
+  }
+}
+@media(max-width:620px){
+  .about-sunflower-visual{
+    position:relative !important;
+    width:100% !important;
+    height:390px !important;
+    min-height:390px !important;
+  }
+  .about-sunflower-visual img{
+    right:-90px !important;
+    top:50% !important;
+    width:500px !important;
+  }
+}
+
+
+/* v11 — clean About sunflower layout */
+.about-story-section{
+  position:relative !important;
+  overflow:hidden !important;
+  background:#fffdf8 !important;
+}
+
+.about-story-layout{
+  display:block !important;
+  min-height:720px !important;
+}
+
+.about-story-copy{
+  width:min(60%, 760px) !important;
+  max-width:760px !important;
+  padding:72px 0 78px !important;
+  position:relative !important;
+  z-index:2 !important;
+}
+
+/* Kill all old sunflower container rules completely */
+.about-sunflower-visual,
+.about-sunflower-visual img{
+  display:none !important;
+}
+
+@media(max-width:1000px){
+  .about-story-section{
+    background-size:auto 82% !important;
+    background-position:calc(100% + 55px) center !important;
+  }
+  .about-story-copy{
+    width:63% !important;
+  }
+}
+
+@media(max-width:760px){
+  .about-story-section{
+    background-image:none !important;
+  }
+  .about-story-copy{
+    width:100% !important;
+    max-width:none !important;
+    padding:56px 0 64px !important;
+  }
+}
+
+/* v12 — same site, sunflower replaced with dahlias */
+.about-story-section{
+  background:
+    linear-gradient(90deg, rgba(255,253,248,0) 0%, rgba(255,253,248,0) 54%, rgba(255,253,248,.10) 66%, rgba(255,253,248,.20) 100%),
+    url('images/about-dahlias.png') calc(100% + 105px) center / auto 82% no-repeat,
+    #fffdf8 !important;
+}
+@media(max-width:1000px){
+  .about-story-section{
+    background-position:center, calc(100% + 115px) center !important;
+    background-size:auto, auto 76% !important;
+  }
+}
+@media(max-width:760px){
+  .about-story-section{background-image:none !important;}
+}
+/* FINAL - NO FLOWERS */
+.about-story-section {
+  background: #fffdf8 !important;
+  background-image: none !important;
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+.mobile-menu-panel {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .site-nav .links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .mobile-menu-btn span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: #3b261b;
+  }
+
+  .mobile-menu-panel {
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px 24px;
+    background: #fffdf8;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  }
+
+  .mobile-menu-panel.open {
+    display: flex;
+  }
+
+  .mobile-menu-panel a {
+    color: #3b261b;
+    text-decoration: none;
+    font-size: 16px;
+  }
+}
