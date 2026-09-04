@@ -1,0 +1,68 @@
+<!doctype html><html><head><title>Design My Porch | By.Soulbloom</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="By.Soulbloom — luxury fall porch styling in Newtown, New Hope, Doylestown and surrounding areas.">
+<link rel="stylesheet" href="assets/style.css"></head><body><nav class="nav site-nav"><div class="container navin">
+<a class="brand" href="index.html"><img src="assets/images/soulbloom-logo.jpg" alt="Soul Bloom"></a>
+<div class="links">
+<a href="index.html">Home</a>
+<a href="packages.html">Packages</a>
+<a href="build.html">Build Your Porch</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">About</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a class="btn nav-cta" href="build.html">Design My Porch</a>
+</div>
+<a class="btn mobile-menu nav-cta" href="build.html">Book</a>
+</div></nav>
+<header class="page-hero"><div class="container"><div class="eyebrow">Fall 2026 Request</div><h1>Build your porch.</h1><p class="muted">Choose your package, palette and extras. Your total is an estimate until we review your porch photo, address and requested date.</p></div></header>
+<section class="section"><div class="container form-wrap">
+<form class="panel" name="porch-request" method="POST" data-netlify="true" enctype="multipart/form-data" action="success.html" id="builder">
+<input type="hidden" name="form-name" value="porch-request">
+<input type="hidden" name="estimated-total" id="estimated-total-input">
+<div class="field"><label>1. Choose your package</label><select id="package" name="package">
+<option value="299" data-key="fall-touch">The Fall Touch — $299</option>
+<option value="499" data-key="harvest" selected>The Harvest Porch — $499</option>
+<option value="749" data-key="grand">The Grand Harvest — $749</option>
+<option value="1199" data-key="signature">Soulbloom Signature — starting at $1,199</option>
+</select></div>
+
+<div class="field"><label>2. Choose your fall style</label><select name="style">
+<option>Classic Harvest — orange / cream / warm brown</option>
+<option>Neutral Harvest — white / cream / sage / muted green</option>
+<option>Soft Autumn — cream / peach / muted orange / sage</option>
+<option>Bold Harvest — orange / rust / burgundy / golden tones</option>
+</select></div>
+
+<div class="field"><label>3. Customize your porch</label><div class="options">
+<label class="choice"><input class="addon" type="checkbox" name="extra-mum" data-price="30"> Extra Mum <strong>+$30</strong></label>
+<label class="choice"><input class="addon" type="checkbox" name="hay-bale" data-price="25"> Hay Bale <strong>+$25</strong></label>
+<label class="choice"><input class="addon" type="checkbox" name="corn-stalks" data-price="45"> Corn Stalk Bundle <strong>+$45</strong></label>
+<label class="choice"><input class="addon" type="checkbox" name="wood-sign" data-price="65"> Fall Wooden Sign <strong>+$65</strong></label>
+<label class="choice"><input class="addon" type="checkbox" name="removal" data-price="200"> Season-End Removal <strong>+$200</strong></label>
+</div></div>
+
+<div class="field"><label>Extra standard pumpkins</label><input type="number" min="0" max="20" value="0" id="extra-pumpkins" name="extra-standard-pumpkins"><span class="small muted">Estimated at $12 each; final price may vary by size.</span></div>
+<div class="field"><label>Extra large / specialty pumpkins</label><input type="number" min="0" max="20" value="0" id="special-pumpkins" name="extra-specialty-pumpkins"><span class="small muted">Estimated at $25 each.</span></div>
+
+<div class="field"><label>4. Upload a photo of your porch</label><input type="file" name="porch-photo" accept="image/*" required></div>
+<div class="field"><label>Full installation address</label><input type="text" name="address" required placeholder="Street, city, state, ZIP"></div>
+<div class="field"><label>ZIP code</label><input id="zip" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" name="zip" required placeholder="18940"></div>
+<div class="field"><label>5. Preferred installation date</label><input type="date" name="preferred-date" min="2026-09-10" max="2026-10-31" required></div>
+
+<div class="field"><label>Your name</label><input type="text" name="name" required></div>
+<div class="field"><label>Email</label><input type="email" name="email" required></div>
+<div class="field"><label>Phone</label><input type="tel" name="phone" required></div>
+<div class="field"><label>Anything else we should know?</label><textarea name="notes" placeholder="Porch size, stairs, color preferences, special requests…"></textarea></div>
+<button class="btn" type="submit">Submit My Request →</button>
+<p class="small muted">Submitting this form does not charge you or guarantee the date. By.Soulbloom reviews the porch and availability first, then confirms final pricing and deposit details.</p>
+</form>
+
+<aside class="panel sticky"><div class="eyebrow">Your Estimate</div><h2 id="package-name">The Harvest Porch</h2><div class="total" id="total">$499</div><ul class="list-clean" id="summary"><li>Design, décor, delivery & installation included</li></ul><div id="delivery-note" class="notice" style="margin-top:18px">Primary service area: 18940, 18938, 18901.</div><p class="small muted">The Signature package begins at $1,199. Outside-area delivery and unusual installation requirements are confirmed after review.</p></aside>
+</div></section>
+<script src="assets/builder.js"></script><footer class="footer"><div class="container">
+<div class="footer-grid">
+<div><div class="eyebrow" style="color:#d8c6b2">By.Soulbloom</div><h3>Beautiful spaces, thoughtfully styled.</h3><p class="muted">Luxury seasonal porch styling for Newtown, New Hope, Doylestown & surrounding areas.</p></div>
+<div><strong>Explore</strong><p><a href="packages.html">Packages</a><br><a href="gallery.html">Gallery</a><br><a href="about.html">About</a><br><a href="faq.html">FAQ</a></p></div>
+<div><strong>Contact</strong><p><a href="tel:+16094562003">609-456-2003</a><br><a href="mailto:bysoulbloom@gmail.com">bysoulbloom@gmail.com</a></p></div>
+</div><p class="small muted">© 2026 By.Soulbloom. All rights reserved.</p>
+</div></footer></body></html>
