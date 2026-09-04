@@ -659,3 +659,8 @@ form .btn:hover{
   object-position: center center !important;
   background: #fffdf8;
 }
+.harvest-porch-photo {
+  object-fit: contain !important;
+  object-position: center 42% !important;
+  background: #fffdf8;
+}
