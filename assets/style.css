@@ -660,8 +660,11 @@ form .btn:hover{
   background: #fffdf8;
 }
 .harvest-porch-photo {
+  width: 92% !important;
+  height: 240px !important;
   object-fit: contain !important;
-  object-position: center 42% !important;
+  object-position: center center !important;
+  display: block;
+  margin: -10px auto 0 auto;
   background: #fffdf8;
-  transform: scale(0.90) translateY(-10px);
 }
