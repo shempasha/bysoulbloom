@@ -653,9 +653,12 @@ form .btn:hover{
     text-decoration: none;
     font-size: 16px;
   }
+<<<<<<< HEAD
 }
 .fall-touch-photo {
   object-fit: contain !important;
   object-position: center center !important;
   background: #fffdf8;
+=======
+>>>>>>> 0da95d03f595877e0b831f373575f2853aaa74b8
 }
