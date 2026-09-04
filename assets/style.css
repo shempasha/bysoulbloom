@@ -663,5 +663,5 @@ form .btn:hover{
   object-fit: contain !important;
   object-position: center 42% !important;
   background: #fffdf8;
-  transform: scale(0.90) translateY(-10px)
+  transform: scale(0.90) translateY(-10px);
 }
