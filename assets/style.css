@@ -668,3 +668,12 @@ form .btn:hover{
   margin: -10px auto 0 auto;
   background: #fffdf8;
 }
+.grand-harvest-photo {
+  width: 100% !important;
+  height: 260px !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  transform: scale(0.82);
+  transform-origin: center center;
+  background: #fffdf8;
+}
