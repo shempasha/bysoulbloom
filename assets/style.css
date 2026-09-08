@@ -18,7 +18,7 @@ p{margin:.4em 0 1em}.muted{color:#6f655d}.eyebrow{text-transform:uppercase;lette
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--ink);background:var(--ink);color:white;text-decoration:none;padding:13px 19px;border-radius:999px;font-weight:700;cursor:pointer}
 .btn.alt{background:transparent;color:var(--ink)}.btn.soft{background:var(--cream);color:var(--ink);border-color:var(--line)}
 .hero{min-height:760px;position:relative;display:grid;align-items:end;overflow:hidden;background:#2b241f}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,15,12,.70),rgba(20,15,12,.20) 58%,rgba(20,15,12,.05)),url('images/IMG_0303.jpeg') center/cover no-repeat}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,15,12,.70),rgba(20,15,12,.20) 58%,rgba(20,15,12,.05)),url('images/IMG_3.jpeg') center/cover no-repeat}
 .hero-content{position:relative;color:white;padding:110px 0 90px;max-width:780px}.hero p{font-size:1.12rem;max-width:610px;color:#f2eae1}.hero .btn{background:#f8f2e8;color:#2a211b;border-color:#f8f2e8}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}.split img{width:100%;height:610px;object-fit:cover;border-radius:var(--radius)}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.stat{background:var(--cream);padding:34px}.stat strong{display:block;font:500 2.3rem Georgia,serif}
@@ -671,4 +671,38 @@ form .btn:hover{
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+/* MOBILE PHOTO POSITIONS */
+@media (max-width: 768px) {
+  .card img[src$="IMG_0306.jpeg"] {
+    object-position: center 72% !important;
+  }
+
+  .card img[src$="IMG_0307.jpeg"] {
+    object-position: center 55% !important;
+  }
+
+  .card img[src$="IMG_0300.jpeg"] {
+    object-position: center 40% !important;
+  }
+
+  .card img[src$="IMG_0303.jpeg"] {
+    object-position: center 45% !important;
+  }
+
+  .card img[src$="IMG_0305.jpeg"] {
+    object-position: center 46% !important;
+  }
+
+  .card img[src$="IMG_0301.jpeg"] {
+    object-position: center 70% !important;
+  }
+
+  .card img[src$="IMG_0304.jpeg"] {
+    object-position: center 72% !important;
+  }
+
+  .card img[src$="IMG_0309.jpeg"] {
+    object-position: center 72% !important;
+  }
 }
