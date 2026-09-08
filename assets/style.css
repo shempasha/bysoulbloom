@@ -675,7 +675,7 @@ form .btn:hover{
 /* MOBILE PHOTO POSITIONS */
 @media (max-width: 768px) {
   .card img[src$="IMG_0306.jpeg"] {
-    object-position: center 72% !important;
+    object-position: center 85% !important;
   }
 
   .card img[src$="IMG_0307.jpeg"] {
@@ -687,22 +687,22 @@ form .btn:hover{
   }
 
   .card img[src$="IMG_0303.jpeg"] {
-    object-position: center 45% !important;
+    object-position: center 65% !important;
   }
 
   .card img[src$="IMG_0305.jpeg"] {
-    object-position: center 46% !important;
+    object-position: center 55% !important;
   }
 
   .card img[src$="IMG_0301.jpeg"] {
-    object-position: center 70% !important;
+    object-position: center 79% !important;
   }
 
   .card img[src$="IMG_0304.jpeg"] {
-    object-position: center 72% !important;
+    object-position: center 82% !important;
   }
 
   .card img[src$="IMG_0309.jpeg"] {
-    object-position: center 72% !important;
+    object-position: center 77% !important;
   }
 }
