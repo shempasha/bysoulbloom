@@ -31,8 +31,8 @@ function calc(){
 }
 function zipCheck(){
   const z=zip.value.trim();
-  if(!z){deliveryNote.textContent='Primary service area: 18940, 18938, 18901.';return;}
-  if(['18940','18938','18901'].includes(z)){
+  if(!z){deliveryNote.textContent='Primary service area: 18940, 18938, 18901, 19046.';return;}
+  if(['18940','18938','18901','19046'].includes(z)){
     deliveryNote.textContent='✓ This ZIP is within the primary service area.';
   }else{
     deliveryNote.textContent='This address may require an additional delivery fee based on distance. By.Soulbloom will confirm it before booking.';
