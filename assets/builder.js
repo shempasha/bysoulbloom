@@ -81,6 +81,12 @@ builderForm.addEventListener('submit', event=>{
 });
 setDateMinimum();
 const params = new URLSearchParams(location.search);
+['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid'].forEach(name=>{
+  const field=document.getElementById(name);
+  if(field) field.value=params.get(name) || '';
+});
+const referrerField=document.getElementById('landing_referrer');
+if(referrerField) referrerField.value=document.referrer || '';
 const key=params.get('package');
 if(key){
   const opt=[...pkg.options].find(o=>o.dataset.key===key);
