@@ -16,8 +16,10 @@
 </div></nav>
 <header class="page-hero"><div class="container"><div class="eyebrow">Fall 2026 Request</div><h1>Build your porch.</h1><p class="muted">Choose your package, palette and extras. Your total is an estimate until we review your porch photo, address and requested date.</p></div></header>
 <section class="section"><div class="container form-wrap">
-<form class="panel" name="porch-request" method="POST" data-netlify="true" enctype="multipart/form-data" action="success.html" id="builder">
+<form class="panel" name="porch-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="success.html" id="builder">
 <input type="hidden" name="form-name" value="porch-request">
+<p hidden><label>Don’t fill this out if you’re human: <input name="bot-field"></label></p>
+<input type="hidden" name="source" value="website-build-your-porch">
 <input type="hidden" name="estimated-total" id="estimated-total-input">
 <div class="field"><label>1. Choose your package</label><select id="package" name="package">
 <option value="299" data-key="fall-touch">The Fall Touch — $299</option>
@@ -44,14 +46,32 @@
 <div class="field"><label>Extra standard pumpkins</label><input type="number" min="0" max="20" value="0" id="extra-pumpkins" name="extra-standard-pumpkins"><span class="small muted">Estimated at $12 each; final price may vary by size.</span></div>
 <div class="field"><label>Extra large / specialty pumpkins</label><input type="number" min="0" max="20" value="0" id="special-pumpkins" name="extra-specialty-pumpkins"><span class="small muted">Estimated at $25 each.</span></div>
 
-<div class="field"><label>4. Upload a photo of your porch</label><input type="file" name="porch-photo" accept="image/*" required></div>
-<div class="field"><label>Full installation address</label><input type="text" name="address" required placeholder="Street, city, state, ZIP"></div>
-<div class="field"><label>ZIP code</label><input id="zip" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" name="zip" required placeholder="18940"></div>
-<div class="field"><label>5. Preferred installation date</label><input type="date" name="preferred-date" min="2026-09-10" max="2026-10-31" required></div>
+<div class="field">
+<label>4. Upload 1–3 photos of your porch</label>
+<p class="small muted">One clear full-porch photo is required. Add a second or third photo for stairs, entry details, or another angle. Keep all photos together under 7 MB.</p>
+<div class="options">
+<label class="choice">Main porch photo — required
+<input class="porch-photo-input" type="file" name="porch-photo-main" accept="image/*" required>
+<span class="small muted">Full view from the front.</span>
+</label>
+<label class="choice">Second photo — optional
+<input class="porch-photo-input" type="file" name="porch-photo-detail" accept="image/*">
+<span class="small muted">Stairs, door, or décor area.</span>
+</label>
+<label class="choice">Third photo — optional
+<input class="porch-photo-input" type="file" name="porch-photo-extra" accept="image/*">
+<span class="small muted">Another angle if helpful.</span>
+</label>
+</div>
+<div id="photo-upload-note" class="notice" style="margin-top:12px">Photos help us recommend the right package and prepare an accurate design.</div>
+</div>
+<div class="field"><label>Full installation address</label><input type="text" name="address" autocomplete="street-address" required placeholder="Street, city, state, ZIP"></div>
+<div class="field"><label>ZIP code</label><input id="zip" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" name="zip" autocomplete="postal-code" required placeholder="18940"></div>
+<div class="field"><label>5. Preferred installation date</label><input id="preferred-date" type="date" name="preferred-date" min="2026-09-10" max="2026-10-31" required></div>
 
-<div class="field"><label>Your name</label><input type="text" name="name" required></div>
-<div class="field"><label>Email</label><input type="email" name="email" required></div>
-<div class="field"><label>Phone</label><input type="tel" name="phone" required></div>
+<div class="field"><label>Your name</label><input type="text" name="name" autocomplete="name" required></div>
+<div class="field"><label>Email</label><input type="email" name="email" autocomplete="email" required></div>
+<div class="field"><label>Phone</label><input type="tel" name="phone" autocomplete="tel" required></div>
 <div class="field"><label>Anything else we should know?</label><textarea name="notes" placeholder="Porch size, stairs, color preferences, special requests…"></textarea></div>
 <button class="btn" type="submit">Submit My Request →</button>
 <p class="small muted">Submitting this form does not charge you or guarantee the date. By.Soulbloom reviews the porch and availability first, then confirms final pricing and deposit details.</p>
