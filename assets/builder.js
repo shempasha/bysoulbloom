@@ -13,6 +13,7 @@ const photoInputs = [...document.querySelectorAll('.porch-photo-input')];
 const photoNote = document.getElementById('photo-upload-note');
 const builderForm = document.getElementById('builder');
 const preferredDate = document.getElementById('preferred-date');
+const requestIdInput = document.getElementById('request-id');
 const MAX_UPLOAD_BYTES = 7 * 1024 * 1024;
 
 function calc(){
@@ -80,6 +81,11 @@ builderForm.addEventListener('submit', event=>{
   }
 });
 setDateMinimum();
+if(requestIdInput && !requestIdInput.value){
+  requestIdInput.value = (window.crypto && crypto.randomUUID)
+    ? crypto.randomUUID()
+    : 'SB-' + Date.now().toString(36).toUpperCase();
+}
 const params = new URLSearchParams(location.search);
 ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid'].forEach(name=>{
   const field=document.getElementById(name);
