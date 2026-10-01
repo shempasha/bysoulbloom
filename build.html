@@ -16,11 +16,13 @@
 </div></nav>
 <header class="page-hero"><div class="container"><div class="eyebrow">Fall 2026 Request</div><h1>Build your porch.</h1><p class="muted">Choose your package, palette and extras. Your total is an estimate until we review your porch photo, address and requested date.</p></div></header>
 <section class="section"><div class="container form-wrap">
-<form class="panel" name="porch-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="success.html" id="builder">
+<form class="panel" name="porch-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="deposit.html" id="builder">
 <input type="hidden" name="form-name" value="porch-request">
 <p hidden><label>Don’t fill this out if you’re human: <input name="bot-field"></label></p>
 <input type="hidden" name="source" value="website-build-your-porch">
 <input type="hidden" name="estimated-total" id="estimated-total-input">
+<input type="hidden" name="deposit-status" value="pending">
+<input type="hidden" name="request-id" id="request-id">
 <input type="hidden" name="utm_source" id="utm_source">
 <input type="hidden" name="utm_medium" id="utm_medium">
 <input type="hidden" name="utm_campaign" id="utm_campaign">
@@ -83,8 +85,12 @@
 <div class="field">
 <label class="choice"><input type="checkbox" name="privacy-consent" value="agreed" required> I agree that By.Soulbloom may use the information and porch photos I submit to review my request and contact me about service. <a href="privacy.html" target="_blank" rel="noopener">Privacy Notice</a>.</label>
 </div>
-<button class="btn" type="submit">Submit My Request →</button>
-<p class="small muted">Submitting this form does not charge you or guarantee the date. By.Soulbloom reviews the porch and availability first, then confirms final pricing and deposit details.</p>
+<div class="notice" style="margin-bottom:14px">
+<strong>$50 reservation deposit</strong><br>
+After submitting your porch details and photos, you’ll continue to a secure Stripe checkout for a $50 deposit. The deposit is applied toward your final balance. Your requested date is not reserved until the deposit is paid and By.Soulbloom confirms availability.
+</div>
+<button class="btn" type="submit">Continue to $50 Deposit →</button>
+<p class="small muted">If By.Soulbloom cannot accommodate your requested service or date, the $50 deposit will be refunded.</p>
 </form>
 
 <aside class="panel sticky"><div class="eyebrow">Your Estimate</div><h2 id="package-name">The Harvest Porch</h2><div class="total" id="total">$499</div><ul class="list-clean" id="summary"><li>Design, décor, delivery & installation included</li></ul><div id="delivery-note" class="notice" style="margin-top:18px">Primary service area: 18940, 18938, 18901, 19046.</div><p class="small muted">The Signature package begins at $1,199. Outside-area delivery and unusual installation requirements are confirmed after review.</p></aside>
