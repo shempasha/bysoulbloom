@@ -14,7 +14,7 @@
 </div>
 <a class="btn mobile-menu nav-cta" href="build.html">Book</a>
 </div></nav>
-<header class="page-hero"><div class="container"><div class="eyebrow">Fall 2026 Request</div><h1>Tell us about your porch.</h1><p class="muted">A quick request takes only a minute. Photos are optional — you can send them later if that’s easier.</p></div></header>
+<header class="page-hero"><div class="container"><div class="eyebrow">Fall 2026 Request</div><h1>Show us your porch.</h1><p class="muted">Send one clear photo and a few details. No payment is required to request your design.</p></div></header>
 <section class="section"><div class="container form-wrap">
 <form class="panel" name="porch-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="success.html" id="builder">
 <input type="hidden" name="form-name" value="porch-request">
@@ -45,12 +45,12 @@
 
 <div class="field"><label>3. ZIP code</label><input id="zip" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" name="zip" autocomplete="postal-code" required placeholder="18940"><div id="delivery-note" class="notice" style="margin-top:12px">Primary service area: 18940, 18938, 18901, 19046.</div></div>
 
-<div class="field"><label>4. Porch photos <span class="small muted">— optional</span></label>
-<p class="small muted">If you already have a photo, upload it now. If not, no problem — submit the request and send us photos later.</p>
+<div class="field"><label>4. Upload a photo of your porch</label>
+<p class="small muted">One clear full-front photo is required so we can see the space and recommend the right setup. Two extra angles are optional.</p>
 <div class="options">
-<label class="choice">Main porch photo — optional
-<input class="porch-photo-input" type="file" name="porch-photo-main" accept="image/*">
-<span class="small muted">A full front view is most helpful.</span></label>
+<label class="choice">Main porch photo — required
+<input class="porch-photo-input" type="file" name="porch-photo-main" accept="image/*" required>
+<span class="small muted">A full front view is best.</span></label>
 <label class="choice">Second photo — optional
 <input class="porch-photo-input" type="file" name="porch-photo-detail" accept="image/*">
 <span class="small muted">Stairs, door, or another angle.</span></label>
@@ -58,20 +58,19 @@
 <input class="porch-photo-input" type="file" name="porch-photo-extra" accept="image/*">
 <span class="small muted">Any extra detail you want us to see.</span></label>
 </div>
-<div id="photo-upload-note" class="notice" style="margin-top:12px">Photos are optional. You can always send them after we contact you.</div>
+<div id="photo-upload-note" class="notice" style="margin-top:12px">Please upload one clear porch photo. Keep all selected photos together under 7 MB.</div>
 </div>
 
-<div class="field"><label>Preferred installation date <span class="small muted">— optional</span></label><input id="preferred-date" type="date" name="preferred-date" min="2026-09-10" max="2026-10-31"></div>
 <div class="field"><label>Your name</label><input type="text" name="name" autocomplete="name" required></div>
 <div class="field"><label>Phone</label><input type="tel" name="phone" autocomplete="tel" required></div>
 <div class="field"><label>Email</label><input type="email" name="email" autocomplete="email" required></div>
 <div class="field"><label>Anything else we should know? <span class="small muted">— optional</span></label><textarea name="notes" placeholder="Porch size, stairs, colors you like, special requests…"></textarea></div>
-<div class="field"><label class="choice"><input type="checkbox" name="privacy-consent" value="agreed" required> I agree that By.Soulbloom may use the information and any porch photos I submit to review my request and contact me about service. <a href="privacy.html" target="_blank" rel="noopener">Privacy Notice</a>.</label></div>
-<button class="btn" type="submit">Request My Porch Design →</button>
-<p class="small muted"><strong>No payment is required to submit this request.</strong> We’ll review your request and contact you first. After you approve the details and we confirm availability, a $50 deposit can reserve your installation date and is applied toward your final balance.</p>
+<div class="field"><label class="choice"><input type="checkbox" name="privacy-consent" value="agreed" required> I agree that By.Soulbloom may use the information and porch photos I submit to review my request and contact me about service. <a href="privacy.html" target="_blank" rel="noopener">Privacy Notice</a>.</label></div>
+<button class="btn" type="submit">Send My Porch Request →</button>
+<p class="small muted"><strong>No payment is required now.</strong> We’ll review your porch photo and contact you first. After you approve the details and we confirm availability, a $50 deposit reserves the confirmed installation date and is applied toward your final balance.</p>
 </form>
 
-<aside class="panel sticky"><div class="eyebrow">What happens next</div><h2>Simple, no-pressure booking.</h2><ul class="list-clean"><li><strong>1.</strong> Send this quick request.</li><li><strong>2.</strong> We review your package, ZIP and any photos.</li><li><strong>3.</strong> Soul Bloom contacts you to confirm the best setup and availability.</li><li><strong>4.</strong> Only after you’re ready, a $50 deposit reserves the confirmed date and goes toward your final balance.</li></ul><div class="notice" style="margin-top:18px">No porch photo right now? Submit anyway — we can ask for it later.</div></aside>
+<aside class="panel sticky"><div class="eyebrow">What happens next</div><h2>Easy first step.</h2><ul class="list-clean"><li><strong>1.</strong> Send one porch photo and your basic details.</li><li><strong>2.</strong> We review the space and recommend the best setup.</li><li><strong>3.</strong> Soul Bloom contacts you to confirm pricing and availability.</li><li><strong>4.</strong> Only after you’re ready, a $50 deposit reserves the confirmed date and goes toward your final balance.</li></ul><div class="notice" style="margin-top:18px">No card or payment is needed to submit this form.</div></aside>
 </div></section>
 <script src="assets/builder.js"></script><footer class="footer"><div class="container">
 <div class="footer-grid">
