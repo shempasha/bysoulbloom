@@ -4,7 +4,6 @@ const deliveryNote = document.getElementById('delivery-note');
 const photoInputs = [...document.querySelectorAll('.porch-photo-input')];
 const photoNote = document.getElementById('photo-upload-note');
 const builderForm = document.getElementById('builder');
-const preferredDate = document.getElementById('preferred-date');
 const MAX_UPLOAD_BYTES = 7 * 1024 * 1024;
 
 function zipCheck(){
@@ -22,14 +21,15 @@ function zipCheck(){
 
 function photoCheck(){
   const files = photoInputs.map(input => input.files && input.files[0]).filter(Boolean);
+  const mainPhoto = photoInputs[0] && photoInputs[0].files && photoInputs[0].files[0];
   const totalBytes = files.reduce((sum,file) => sum + file.size, 0);
   const totalMb = totalBytes / (1024 * 1024);
 
-  if(!files.length){
-    photoNote.textContent = 'Photos are optional. You can always send them after we contact you.';
-    photoNote.style.background = '';
-    photoNote.style.color = '';
-    return true;
+  if(!mainPhoto){
+    photoNote.textContent = 'Please upload one clear front-view photo of your porch.';
+    photoNote.style.background = '#fff0eb';
+    photoNote.style.color = '#8a2f1e';
+    return false;
   }
 
   if(totalBytes > MAX_UPLOAD_BYTES){
@@ -45,17 +45,6 @@ function photoCheck(){
   return true;
 }
 
-function setDateMinimum(){
-  if(!preferredDate) return;
-  const seasonStart = '2026-09-10';
-  const seasonEnd = '2026-10-31';
-  const now = new Date();
-  const localToday = new Date(now.getTime() - now.getTimezoneOffset()*60000).toISOString().slice(0,10);
-  if(localToday >= seasonStart && localToday <= seasonEnd){
-    preferredDate.min = localToday;
-  }
-}
-
 zip.addEventListener('input', zipCheck);
 photoInputs.forEach(input => input.addEventListener('change', photoCheck));
 builderForm.addEventListener('submit', event => {
@@ -64,8 +53,6 @@ builderForm.addEventListener('submit', event => {
     photoNote.scrollIntoView({behavior:'smooth',block:'center'});
   }
 });
-
-setDateMinimum();
 
 const params = new URLSearchParams(location.search);
 ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid'].forEach(name => {
