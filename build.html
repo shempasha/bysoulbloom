@@ -1,5 +1,5 @@
 <!doctype html><html><head><title>Design My Porch | By.Soulbloom</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="By.Soulbloom — luxury fall porch styling in Newtown, New Hope, Doylestown, Jenkintown and surrounding areas.">
+<meta name="description" content="Request fall porch styling from By.Soulbloom in Newtown, New Hope, Doylestown, Jenkintown and surrounding areas.">
 <link rel="stylesheet" href="assets/style.css"></head><body><nav class="nav site-nav"><div class="container navin">
 <a class="brand" href="index.html"><img src="assets/images/soulbloom-logo.jpg" alt="Soul Bloom"></a>
 <div class="links">
@@ -14,13 +14,12 @@
 </div>
 <a class="btn mobile-menu nav-cta" href="build.html">Book</a>
 </div></nav>
-<header class="page-hero"><div class="container"><div class="eyebrow">Fall 2026 Request</div><h1>Build your porch.</h1><p class="muted">Choose your package, palette and extras. Your total is an estimate until we review your porch photo, address and requested date.</p></div></header>
+<header class="page-hero"><div class="container"><div class="eyebrow">Fall 2026 Request</div><h1>Tell us about your porch.</h1><p class="muted">A quick request takes only a minute. Photos are optional — you can send them later if that’s easier.</p></div></header>
 <section class="section"><div class="container form-wrap">
 <form class="panel" name="porch-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="success.html" id="builder">
 <input type="hidden" name="form-name" value="porch-request">
 <p hidden><label>Don’t fill this out if you’re human: <input name="bot-field"></label></p>
-<input type="hidden" name="source" value="website-build-your-porch">
-<input type="hidden" name="estimated-total" id="estimated-total-input">
+<input type="hidden" name="source" value="website-quick-porch-request">
 <input type="hidden" name="utm_source" id="utm_source">
 <input type="hidden" name="utm_medium" id="utm_medium">
 <input type="hidden" name="utm_campaign" id="utm_campaign">
@@ -28,66 +27,51 @@
 <input type="hidden" name="utm_term" id="utm_term">
 <input type="hidden" name="fbclid" id="fbclid">
 <input type="hidden" name="landing_referrer" id="landing_referrer">
-<div class="field"><label>1. Choose your package</label><select id="package" name="package">
-<option value="299" data-key="fall-touch">The Fall Touch — $299</option>
-<option value="499" data-key="harvest" selected>The Harvest Porch — $499</option>
-<option value="749" data-key="grand">The Grand Harvest — $749</option>
-<option value="1199" data-key="signature">Soulbloom Signature — starting at $1,199</option>
+
+<div class="field"><label>1. Which package are you interested in?</label><select id="package" name="package" required>
+<option value="Not sure — help me choose">Not sure — help me choose</option>
+<option value="The Fall Touch — $299">The Fall Touch — $299</option>
+<option value="The Harvest Porch — $499">The Harvest Porch — $499</option>
+<option value="The Grand Harvest — $749">The Grand Harvest — $749</option>
+<option value="Soulbloom Signature — from $1,199">Soulbloom Signature — from $1,199</option>
 </select></div>
 
-<div class="field"><label>2. Choose your fall style</label><select name="style">
-<option>Classic Harvest — orange / cream / warm brown</option>
-<option>Neutral Harvest — white / cream / sage / muted green</option>
-<option>Soft Autumn — cream / peach / muted orange / sage</option>
-<option>Bold Harvest — orange / rust / burgundy / golden tones</option>
+<div class="field"><label>2. When are you hoping to have it done?</label><select name="timeframe" required>
+<option value="ASAP">ASAP</option>
+<option value="Within 1–2 weeks">Within 1–2 weeks</option>
+<option value="Later this fall">Later this fall</option>
+<option value="Flexible">Flexible</option>
 </select></div>
 
-<div class="field"><label>3. Customize your porch</label><div class="options">
-<label class="choice"><input class="addon" type="checkbox" name="extra-mum" data-price="30"> Extra Mum <strong>+$30</strong></label>
-<label class="choice"><input class="addon" type="checkbox" name="hay-bale" data-price="25"> Hay Bale <strong>+$25</strong></label>
-<label class="choice"><input class="addon" type="checkbox" name="corn-stalks" data-price="45"> Corn Stalk Bundle <strong>+$45</strong></label>
-<label class="choice"><input class="addon" type="checkbox" name="wood-sign" data-price="65"> Fall Wooden Sign <strong>+$65</strong></label>
-<label class="choice"><input class="addon" type="checkbox" name="removal" data-price="200"> Season-End Removal <strong>+$200</strong></label>
-</div></div>
+<div class="field"><label>3. ZIP code</label><input id="zip" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" name="zip" autocomplete="postal-code" required placeholder="18940"><div id="delivery-note" class="notice" style="margin-top:12px">Primary service area: 18940, 18938, 18901, 19046.</div></div>
 
-<div class="field"><label>Extra standard pumpkins</label><input type="number" min="0" max="20" value="0" id="extra-pumpkins" name="extra-standard-pumpkins"><span class="small muted">Estimated at $12 each; final price may vary by size.</span></div>
-<div class="field"><label>Extra large / specialty pumpkins</label><input type="number" min="0" max="20" value="0" id="special-pumpkins" name="extra-specialty-pumpkins"><span class="small muted">Estimated at $25 each.</span></div>
-
-<div class="field">
-<label>4. Upload 1–3 photos of your porch</label>
-<p class="small muted">One clear full-porch photo is required. Add a second or third photo for stairs, entry details, or another angle. Keep all photos together under 7 MB.</p>
+<div class="field"><label>4. Porch photos <span class="small muted">— optional</span></label>
+<p class="small muted">If you already have a photo, upload it now. If not, no problem — submit the request and send us photos later.</p>
 <div class="options">
-<label class="choice">Main porch photo — required
-<input class="porch-photo-input" type="file" name="porch-photo-main" accept="image/*" required>
-<span class="small muted">Full view from the front.</span>
-</label>
+<label class="choice">Main porch photo — optional
+<input class="porch-photo-input" type="file" name="porch-photo-main" accept="image/*">
+<span class="small muted">A full front view is most helpful.</span></label>
 <label class="choice">Second photo — optional
 <input class="porch-photo-input" type="file" name="porch-photo-detail" accept="image/*">
-<span class="small muted">Stairs, door, or décor area.</span>
-</label>
+<span class="small muted">Stairs, door, or another angle.</span></label>
 <label class="choice">Third photo — optional
 <input class="porch-photo-input" type="file" name="porch-photo-extra" accept="image/*">
-<span class="small muted">Another angle if helpful.</span>
-</label>
+<span class="small muted">Any extra detail you want us to see.</span></label>
 </div>
-<div id="photo-upload-note" class="notice" style="margin-top:12px">Photos help us recommend the right package and prepare an accurate design.</div>
+<div id="photo-upload-note" class="notice" style="margin-top:12px">Photos are optional. You can always send them after we contact you.</div>
 </div>
-<div class="field"><label>Full installation address</label><input type="text" name="address" autocomplete="street-address" required placeholder="Street, city, state, ZIP"></div>
-<div class="field"><label>ZIP code</label><input id="zip" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" name="zip" autocomplete="postal-code" required placeholder="18940"></div>
-<div class="field"><label>5. Preferred installation date</label><input id="preferred-date" type="date" name="preferred-date" min="2026-09-10" max="2026-10-31" required></div>
 
+<div class="field"><label>Preferred installation date <span class="small muted">— optional</span></label><input id="preferred-date" type="date" name="preferred-date" min="2026-09-10" max="2026-10-31"></div>
 <div class="field"><label>Your name</label><input type="text" name="name" autocomplete="name" required></div>
-<div class="field"><label>Email</label><input type="email" name="email" autocomplete="email" required></div>
 <div class="field"><label>Phone</label><input type="tel" name="phone" autocomplete="tel" required></div>
-<div class="field"><label>Anything else we should know?</label><textarea name="notes" placeholder="Porch size, stairs, color preferences, special requests…"></textarea></div>
-<div class="field">
-<label class="choice"><input type="checkbox" name="privacy-consent" value="agreed" required> I agree that By.Soulbloom may use the information and porch photos I submit to review my request and contact me about service. <a href="privacy.html" target="_blank" rel="noopener">Privacy Notice</a>.</label>
-</div>
-<button class="btn" type="submit">Continue to $50 Deposit →</button>
-<p class="small muted">After you submit your porch details, you’ll continue to Stripe to pay a $50 booking deposit. The $50 deposit is applied toward your final balance. Your installation date is confirmed after By.Soulbloom reviews availability and final pricing.</p>
+<div class="field"><label>Email</label><input type="email" name="email" autocomplete="email" required></div>
+<div class="field"><label>Anything else we should know? <span class="small muted">— optional</span></label><textarea name="notes" placeholder="Porch size, stairs, colors you like, special requests…"></textarea></div>
+<div class="field"><label class="choice"><input type="checkbox" name="privacy-consent" value="agreed" required> I agree that By.Soulbloom may use the information and any porch photos I submit to review my request and contact me about service. <a href="privacy.html" target="_blank" rel="noopener">Privacy Notice</a>.</label></div>
+<button class="btn" type="submit">Request My Porch Design →</button>
+<p class="small muted"><strong>No payment is required to submit this request.</strong> We’ll review your request and contact you first. After you approve the details and we confirm availability, a $50 deposit can reserve your installation date and is applied toward your final balance.</p>
 </form>
 
-<aside class="panel sticky"><div class="eyebrow">Your Estimate</div><h2 id="package-name">The Harvest Porch</h2><div class="total" id="total">$499</div><ul class="list-clean" id="summary"><li>Design, décor, delivery & installation included</li></ul><div id="delivery-note" class="notice" style="margin-top:18px">Primary service area: 18940, 18938, 18901, 19046.</div><p class="small muted">The Signature package begins at $1,199. Outside-area delivery and unusual installation requirements are confirmed after review.</p></aside>
+<aside class="panel sticky"><div class="eyebrow">What happens next</div><h2>Simple, no-pressure booking.</h2><ul class="list-clean"><li><strong>1.</strong> Send this quick request.</li><li><strong>2.</strong> We review your package, ZIP and any photos.</li><li><strong>3.</strong> Soul Bloom contacts you to confirm the best setup and availability.</li><li><strong>4.</strong> Only after you’re ready, a $50 deposit reserves the confirmed date and goes toward your final balance.</li></ul><div class="notice" style="margin-top:18px">No porch photo right now? Submit anyway — we can ask for it later.</div></aside>
 </div></section>
 <script src="assets/builder.js"></script><footer class="footer"><div class="container">
 <div class="footer-grid">
