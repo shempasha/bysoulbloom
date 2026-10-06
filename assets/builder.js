@@ -21,15 +21,14 @@ function zipCheck(){
 
 function photoCheck(){
   const files = photoInputs.map(input => input.files && input.files[0]).filter(Boolean);
-  const mainPhoto = photoInputs[0] && photoInputs[0].files && photoInputs[0].files[0];
   const totalBytes = files.reduce((sum,file) => sum + file.size, 0);
   const totalMb = totalBytes / (1024 * 1024);
 
-  if(!mainPhoto){
-    photoNote.textContent = 'Please upload one clear front-view photo of your porch.';
-    photoNote.style.background = '#fff0eb';
-    photoNote.style.color = '#8a2f1e';
-    return false;
+  if(!files.length){
+    photoNote.textContent = 'Photos are optional. You can always send them after we contact you.';
+    photoNote.style.background = '';
+    photoNote.style.color = '';
+    return true;
   }
 
   if(totalBytes > MAX_UPLOAD_BYTES){
