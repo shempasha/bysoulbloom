@@ -7,3 +7,6 @@
 
 /* Navigation only: accommodate the new Proposals link on tablet-width screens. */
 @media(min-width:901px) and (max-width:1100px){.desktop-nav,.nav-cta{display:none}.menu-toggle{display:block;margin-left:auto}.mobile-nav.is-open{display:block}}
+
+/* Seasonal Christmas photo edit: a natural-height, responsive editorial gallery. */
+.holiday-showcase{background:#fcfaf6}.holiday-gallery{columns:3 255px;column-gap:20px}.holiday-gallery-item{break-inside:avoid;-webkit-column-break-inside:avoid;margin:0 0 25px}.holiday-gallery-item img{width:100%;height:auto;display:block}.holiday-gallery-item figcaption{margin-top:9px;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:#8b7771}@media(max-width:650px){.holiday-gallery{columns:2 140px;column-gap:12px}.holiday-gallery-item{margin-bottom:18px}.holiday-gallery-item figcaption{font-size:.62rem;letter-spacing:.06em;line-height:1.4}}
